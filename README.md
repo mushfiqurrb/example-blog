@@ -4,7 +4,6 @@
 
 You can deploy this app yourself to Heroku to play with.
 
-### https://grayspace-it.herokuapp.com/
 
 ## Running
 
