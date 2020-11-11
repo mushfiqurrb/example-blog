@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Post Title
+        <small>by
+            <a href="#">Start Bootstrap</a>
+        </small>
+        </h1>
+
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Blog Home 2</li>
+        </ol>
+
+        <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-md-6 col-auto">
+            <div class="card">
+                <div class="card-header">
+                Post-Comments
+                </div>
+                <ul class="list-group list-group-flush">
+                {% for post_comment in post_comments %}
+                <li class="list-group-item">
+                    <div class="destination_subtitle">
+                        <p>Post-ID:  {{post_comment.id}}</p>
+                    </div>
+                    <div class="destination_subtitle">
+                        <p>Post-Name:  {{post_comment.name}}</p>
+                    </div>
+                    <div class="destination_subtitle">
+                        <p>Email:  {{post_comment.email}}</p>
+                    </div>
+                    <div class="destination_subtitle">
+                        <p>Comments:  {{post_comment.body}}</p>
+                        </div>
+                    </li>
+                <!--<li class="list-group-item">{{ post_comment.id }} - {{ post_comment.name }}  - {{post_comment.email}} - {{post_comment.body}}</li>-->
+                {% endfor %}
+                </ul>
+            </div>
+            </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <!-- Search Widget -->
+            <div class="card mb-4">
+            <h5 class="card-header">Search</h5>
+            <div class="card-body">
+                <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="inpug-group-append">
+                    <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+                </div>
+            </div>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="card my-4">
+            <h5 class="card-header">Categories</h5>
+            <div class="card-body">
+                <div class="row">
+                <div class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#">Web Design</a>
+                    </li>
+                    <li>
+                        <a href="#">HTML</a>
+                    </li>
+                    <li>
+                        <a href="#">Freebies</a>
+                    </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#">JavaScript</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS</a>
+                    </li>
+                    <li>
+                        <a href="#">Tutorials</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Side Widget -->
+            <div class="card my-4">
+            <h5 class="card-header">Side Widget</h5>
+            <div class="card-body">
+                You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+            </div>
+            </div>
+
+        </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock container %}

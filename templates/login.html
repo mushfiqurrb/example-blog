@@ -12,28 +12,39 @@
       <li class="breadcrumb-item active">Login</li>
     </ol>
     <!-- Content Row -->
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <form name="sentMessage" id="contactForm" novalidate>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Email*</label>
-              <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email.">
-              <p class="help-block"></p>
-            </div>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+      <div class="wrapper wrapper--w680">
+          <div class="card card-1">
+              <div class="card-heading"></div>
+              <div class="card-body">
+                  <h2 class="title">Login Page</h2>
+                  <form method="POST">
+                      {% csrf_token %}
+                      <div class="control-group form-group">
+                        <div class="controls">
+                          <label>Username*</label>
+                          <input type="text" name="username" class="form-control" id="username" required data-validation-required-message="Please enter your username.">
+                          <p class="help-block"></p>
+                        </div>
+                      </div>
+                      <div class="control-group form-group">
+                        <div class="controls">
+                          <label>Password*</label>
+                          <input type="password" name="password" class="form-control" id="password" required data-validation-required-message="Please enter your password.">
+                          <p class="help-block"></p>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary" id="login-btn">Login</button>
+                  </form>
+                  <div>
+                      {% for message in messages %}
+                      <h3> {{message}}  </h3>
+                      {% endfor %}
+              </div>
+              </div>
           </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Password*</label>
-              <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password.">
-            </div>
-          </div>
-          <div id="success"></div>
-          <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-primary" id="login-btn">Login</button>
-        </form>
       </div>
-    </div>
+  </div>
     <!-- /.row -->
 
   </div>
