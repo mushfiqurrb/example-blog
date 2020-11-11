@@ -4,7 +4,7 @@
 
 You can deploy this app yourself to Heroku to play with.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+### https://grayspace-it.herokuapp.com/
 
 ## Running
 
