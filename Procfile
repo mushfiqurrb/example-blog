@@ -1,0 +1,1 @@
+Web: gunicorn grayspaceit-wsgi --log-file -
