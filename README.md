@@ -1,7 +1,7 @@
 # Blog Django Example App
 ## Have successfully completed phase 1,2 and bonus 1
 
-## Running
+## Heroku Link = https://gray-space-it.herokuapp.com/
 
 It is best to use the python `virtualenv` tool to build locally:
 
